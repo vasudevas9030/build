@@ -5,4 +5,4 @@
 <h1> this is for sample to githook file</h1>
 <h1>all is set</h1>
 <h2 style="color:green">i am vasudev shown to this mr komal<h2>
-<img src="https://buffer.com/library/free-images/" style="length:1200px; width:900px">image2</img>
+<img src="https://spy123.s3.ap-south-1.amazonaws.com/imgres.htm" style="length:1200px; width:900px">image2</img>
