@@ -6,3 +6,4 @@
 <h1>all is set</h1>
 <h2 style="color:green">i am vasudev shown to this mr komal<h2>
 <img src="https://spy123.s3.ap-south-1.amazonaws.com/IMG_20211229_123301_392.jpg" style="length:1200px; width:900px">image2</img>
+<img src="https://spy123.s3.ap-south-1.amazonaws.com/IMG_20211022_120843_658.jpg" style="length:1100px; width:800px">image3</img>
