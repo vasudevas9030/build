@@ -44,16 +44,16 @@ pipeline{
             steps {
                 script {
                     // Pull the latest Tomcat image
-                    sh "docker pull ${DOCKER_IMAGE}"
+                    sh "sudo docker pull ${DOCKER_IMAGE}"
                     
                     // Remove any existing container with the same name
-                    sh "docker rm -f ${CONTAINER_NAME} || true"
+                    sh "sudo docker rm -f ${CONTAINER_NAME} || true"
                     
                     // Run a new Tomcat container
-                    sh "docker run -d --name ${CONTAINER_NAME} -p 8082:8080 ${DOCKER_IMAGE}"
+                    sh "sudo docker run -d --name ${CONTAINER_NAME} -p 8082:8080 ${DOCKER_IMAGE}"
                     
                     // Copy the WAR file to the Tomcat container
-                    sh "docker cp target/${WAR_FILE} ${CONTAINER_NAME}:/usr/local/tomcat/webapps/"
+                    sh "sudo docker cp target/${WAR_FILE} ${CONTAINER_NAME}:/usr/local/tomcat/webapps/"
               }
           }
       }
