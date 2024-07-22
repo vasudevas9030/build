@@ -25,7 +25,7 @@ pipeline{
       }
        stage("quality gate"){
         steps{
-           waitForQualityGate abortpipeline: false, credentialsId: 'sonarqube'
+           waitForQualityGate 'sonarqube'
         }
       }
       stage("deploy"){
