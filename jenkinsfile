@@ -1,7 +1,7 @@
 pipeline{
   agent any
    environment {
-        DOCKER_IMAGE = 'tomcat:latest'
+        DOCKER_IMAGE = 'tomcat'
         CONTAINER_NAME = 'tomcat-1'
         WAR_FILE = 'webapp.war'
     }
@@ -53,7 +53,7 @@ pipeline{
                     sh "sudo docker run -d --name ${CONTAINER_NAME} -p 8082:8080 ${DOCKER_IMAGE}"
                     
                     // Copy the WAR file to the Tomcat container
-                    sh "sudo docker cp target/${WAR_FILE} ${CONTAINER_NAME}:/usr/local/tomcat/webapps/"
+                    sh "sudo docker cp webapp/target/${WAR_FILE} ${CONTAINER_NAME}:/usr/local/tomcat/webapps/"
               }
           }
       }
