@@ -54,10 +54,9 @@ pipeline{
                     
                     // Copy the WAR file to the Tomcat container
                     sh "docker cp target/${WAR_FILE} ${CONTAINER_NAME}:/usr/local/tomcat/webapps/"
-                }
-            }
-        }
-    }
+              }
+          }
+      }
   }
 }
 
