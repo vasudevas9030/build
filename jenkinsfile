@@ -33,7 +33,8 @@ pipeline{
            waitForQualityGate 'sonarqube'
         }
       }
-      stage("deploy"){
+      /*
+stage("deploy"){
         steps{
           sshagent(['tomcat-server']) {
             sh "scp -o StrictHostKeyChecking=no webapp/target/webapp.war ec2-user@3.137.192.3:/opt/tomcat/webapps"
@@ -55,7 +56,7 @@ pipeline{
                     // Copy the WAR file to the Tomcat container
                     sh "docker cp webapp/target/${WAR_FILE} ${CONTAINER_NAME}:/usr/local/tomcat/webapps/"
               }
-          }
+          }*/
       }
   }
 }
