@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: tomcat
-        image: tomcat:5
+        image: tomcat:v6
         ports:
         - containerPort: 8080
 
