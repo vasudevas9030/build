@@ -1,44 +1,21 @@
-/tomcat:.*/vasudevas9030/website:v8/g
 apiVersion: apps/v1
-/tomcat:.*/vasudevas9030/website:v8/g
 kind: Deployment
-/tomcat:.*/vasudevas9030/website:v8/g
 metadata:
-/tomcat:.*/vasudevas9030/website:v8/g
   name: tomcat-deployment
-/tomcat:.*/vasudevas9030/website:v8/g
   labels:
-/tomcat:.*/vasudevas9030/website:v8/g
     app: tomcat
-/tomcat:.*/vasudevas9030/website:v8/g
 spec:
-/tomcat:.*/vasudevas9030/website:v8/g
   replicas: 2
-/tomcat:.*/vasudevas9030/website:v8/g
   selector:
-/tomcat:.*/vasudevas9030/website:v8/g
     matchLabels:
-/tomcat:.*/vasudevas9030/website:v8/g
       app: tomcat
-/tomcat:.*/vasudevas9030/website:v8/g
   template:
-/tomcat:.*/vasudevas9030/website:v8/g
     metadata:
-/tomcat:.*/vasudevas9030/website:v8/g
       labels:
-/tomcat:.*/vasudevas9030/website:v8/g
         app: tomcat
-/tomcat:.*/vasudevas9030/website:v8/g
     spec:
-/tomcat:.*/vasudevas9030/website:v8/g
       containers:
-/tomcat:.*/vasudevas9030/website:v8/g
       - name: tomcat
-/tomcat:.*/vasudevas9030/website:v8/g
-        image: tomcat:v6
-/tomcat:.*/vasudevas9030/website:v8/g
+        image: tomcat:latest
         ports:
-/tomcat:.*/vasudevas9030/website:v8/g
         - containerPort: 8080
-/tomcat:.*/vasudevas9030/website:v8/g
-
