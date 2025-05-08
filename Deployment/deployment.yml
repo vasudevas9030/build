@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: tomcat
-        image: vasudevas9030/tomcat:v5
+        image: vasudevas9030/pampat:v5
         ports:
         - containerPort: 8080
