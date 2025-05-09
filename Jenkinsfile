@@ -45,7 +45,7 @@ pipeline {
                         git config user.email "vasudevas9030@gmail.com"
                         git config user.name "vasu"
 
-                       sed -i "s/tomcat:.*/tomcat:v${BUILD_NUMBER}/g" Deployment/deployment.yml
+                       sed -i "s/vasu:.*/tomcat:v${BUILD_NUMBER}/g" Deployment/deployment.yml
                        sed -i "s/tomcat/tomcat/g" Jenkinsfile
                         git add .
 
