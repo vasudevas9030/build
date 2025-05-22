@@ -1,20 +1,23 @@
+
+
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: build
+  name: build 
   namespace: argocd
+  labels:
+    name: build
 spec:
-  project: default  # Or use a custom Argo CD project name if defined
+  project: default
   source:
-    repoURL: 'https://github.com/vasudevas9030/build.git'
-    targetRevision: HEAD  # or specify a branch/tag/commit, like "main"
-    path: .  # Update this to the path where your manifests are (e.g., '.' if in root)
+    repoURL: https://github.com/vasudevas9030/build.git
+    targetRevision: lab 
+    path: Deployment
   destination:
-    server: 'https://kubernetes.default.svc'
+    server: https://kubernetes.default.svc
     namespace: build
   syncPolicy:
-    automated:  # Optional: enables auto-syncing
-      prune: true  # Automatically delete resources no longer defined
-      selfHeal: true  # Revert out-of-band changes in the cluster
-    syncOptions:
-      - CreateNamespace=true  # Automatically create the namespace if it doesn't exist
+    automated: 
+      prune: true
+      selfHeal: true
+
